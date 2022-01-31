@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Basic Sample Hardhat Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
 
-## Available Scripts
+Try running some of the following tasks:
 
-In the project directory, you can run:
+```shell
+npx hardhat accounts
+npx hardhat compile
+npx hardhat clean
+npx hardhat test
+npx hardhat node
+node scripts/sample-script.js
+npx hardhat help
+```
 
-### `npm start`
+NFT-Metaverse-Demo
+About Project:-
+The project NFT-Metaverse is - a digital marketplace.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+When a user puts an item for sale, the ownership of the item will be transferred from the creator to the marketplace.
+When a user purchases an item, the purchase price will be transferred from the buyer to the seller and the item will be transferred from the marketplace to the buyer.
+The marketplace owner will be able to set a listing fee. This fee will be taken from the seller and transferred to the contract owner upon completion of any sale, enabling the owner of the marketplace to earn recurring revenue from any sale transacted in the marketplace.
+The marketplace logic will consist of two smart contracts:
+NFT Contract - This contract allows users to mint unique digital assets.
+NFTMarket Contract - This contract allows users to put their digital assets for sale on an open market.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+What is a Non-Fungible Token?
+A Non-Fungible Token (NFT) is used to identify something or someone in a unique way. This type of Token is perfect to be used on platforms that offer collectible items, access keys, lottery tickets, numbered seats for concerts and sports matches, etc.
+What is ERC-721?
+The ERC-721 introduces a standard for NFT, in other words, this type of Token is unique and can have different value than another Token from the same Smart Contract.
+All NFTs have a uint256 variable called tokenId, so for any ERC-721 Contract, the pair contract address, uint256 tokenId must be globally unique.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+NPX install credential
+--------------------------------
 
-### `npm run eject`
+npx create-react-app react-dapp
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm install ethers hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npx hardhat
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npx hardhat compile
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm i react-router-dom
 
-## Learn More
+npm i web3modal
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm i ipfs-http-client
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npx hardhat run scripts/deploy.js --network goerli
 
-### Code Splitting
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm install @openzeppelin/contracts
 
-### Analyzing the Bundle Size
+npx hardhat node
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+npm i bootstrap
 
-### Making a Progressive Web App
+Project Demo
+Home Page  Screenshot
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+NFT Contract Address                 : 0x9a4e65D00ab3C7A103058217F173a467C5056d8e
+NFT Market Contract Address   : 0x37239103587f90fa0C2763e45911036979bB6a52
+Test net                     : Goerli
+Wallet                      : Mata mask
+Development Tool: Hardhat
+Front End                 :React js
+Token Name            :DABLU PRASAD
+Symbol                    : DP
+For Interaction between frontend and smart contract : Ether js
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
