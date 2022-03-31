@@ -9,7 +9,8 @@ const Navbar=(props)=>{
      <a className="navbar-brand">NFT marketplace</a>
       {/* <h5 className="navbar-brand">balance: {props.balance} {props.symbol}</h5>  */}
      <form className="d-flex"> 
-       <h4 className="navbar-brand">account:{props.account}</h4>
+      <h4 className="navbar-brand">interfaceID: {props.interfaceid}</h4>
+       <h4 className="navbar-brand">account: {props.account}</h4>
      </form>
    </div>
  </nav>

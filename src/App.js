@@ -18,6 +18,7 @@ import Index_Home from './components/templates/Index_Home';
  // const [name,setname]=useState();
   //const [symbol,setsymbol]=useState();
   const[account,setaccount]=useState();
+  const[interfaceid,setinterfaceid]=useState();
   //const[balance,setbalance]=useState();
  
     async function getAddress()
@@ -27,6 +28,9 @@ import Index_Home from './components/templates/Index_Home';
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(nftaddress, NFT.abi, signer);
+        const   interfaceid=await contract.calcFingerPrint();
+
+      console.log(interfaceid);
    
      // const balance= await contract.balanceOf(account)
    //  console.log(account)
@@ -38,6 +42,7 @@ import Index_Home from './components/templates/Index_Home';
       //setname(TokenName)
       //setsymbol(TokenSynbol)
       setaccount(account)
+      setinterfaceid(interfaceid)
       //setbalance(balance.toString())
     }
     
@@ -47,7 +52,7 @@ import Index_Home from './components/templates/Index_Home';
     <>
     <Router>
       <div className="App">
-      <Navbar account={account}/>
+      <Navbar account={account} interfaceid={interfaceid}/>
       <Menu/>
         <Routes>
         <Route exact path="/" element={<Index_Home/>}/>
